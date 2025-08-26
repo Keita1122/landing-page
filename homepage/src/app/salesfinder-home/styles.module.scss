@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.page {
+  color: $color-text;
+
+  .header {
+    background: $color-primary-gradation-blue;
+
+    button {
+      background: none;
+      border: none;
+      .logo {
+        width: 10rem;
+        height: auto;
+      }
+    }
+  }
+}

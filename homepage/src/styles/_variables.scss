@@ -1,0 +1,48 @@
+// カラー定義
+$color-primary-lightblue: #2563eb;
+$color-primary-blue: #1d4ed8;
+$color-primary-navyblue: #1e40af;
+$color-element-background: #fefeff;
+$color-primary-gradation-blue: linear-gradient(135deg, #1e40af, #1d4ed8);
+$color-background: #f5f5fa;
+$color-text: #282828;
+$color-small-text: #787878;
+$color-button-text: white;
+$color-button-background-hover: #8cb0ff4d;
+$color-button-text-hover: rgb(38, 72, 182);
+
+// フォント
+$font-family-base: "Noto Sans JP", sans-serif;
+$font-size-base: 1rem;
+$general-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
+
+// ブレークポイント
+$breakpoint-sm: 48rem;
+$breakpoint-md: 64rem;
+$breakpoint-lg: 80rem;
+$breakpoint-xl: 96rem;
+
+// スペーシング（マージン・パディングの単位用）
+$spacing-unit: 8px;
+
+// ボックスシャドー(背景の影)
+$general-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.25);
+
+// メインボーダー
+$border-main: 1px solid #d7d7d7;
+$border-radius: 0.5rem;
+
+//ボタン(共通)
+$button-font-size: 1.2rem;
+$button-font-size: 1rem;
+$button-font-weight: bolder;
+$button-cursor: pointer;
+$button-transition: background-color 0.2s ease-in-out;
+$button-transition: background-color 0.2s ease-in-out;
+$button-border-radius: 0.3rem;
+$button-border: 1px solid $color-primary-blue;
+
+//inputタグ
+$input-padding: 0.2rem 0.4rem;
+$input-border: $border-main;
+$input-border-radius: 0.2rem;
