@@ -3,17 +3,11 @@
 
 .page {
   color: $color-text;
-
-  .header {
-    background: $color-primary-gradation-blue;
-
-    button {
-      background: none;
-      border: none;
-      .logo {
-        width: 10rem;
-        height: auto;
-      }
-    }
-  }
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(73, 185, 255) transparent;
+  overflow-x: hidden;
 }

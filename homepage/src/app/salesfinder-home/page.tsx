@@ -1,31 +1,23 @@
 'use client'
-import React, {useState} from 'react';
+import React from 'react';
 import styles from "./styles.module.scss";
-import Image from "next/image";
-import Logo from "../../../public/new-logo.png";
 
-//import CircularNavigation from '@/components/CIrcularNavigation';
+import Header from '@/components/header/Header';
+import MainScreen from '@/components/main-screen/MainScreen';
+
 
 export default function Home (){
 
   return(
     <div className={styles.page}>
-      <div className={styles.header}>
-        <button><Image src={Logo} alt="ロゴ" className={styles.logo}/></button>
-        <nav>
-          <ul>
-            <li>会社概要</li>
-            <li>事業内容</li>
-            <li>会社概要</li>
-            <li>お問い合わせ</li>
-          </ul>
-        </nav>
-      </div>
-
+      <Header />     
       <div className={styles.main}>
-        
+        <MainScreen />        
+      </div>
+      
+      <div className={styles.companySection}>
+
       </div>
     </div>
-
   )
 };
