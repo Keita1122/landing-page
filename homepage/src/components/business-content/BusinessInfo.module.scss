@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.main {
+
+  .explanation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  
+  .businesses {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;  
+    padding: 0 1rem;
+    
+    .content {
+      flex: 1;
+      background: $color-element-background;
+      border: $border-main;
+      border-radius: $border-radius;
+      padding: 1rem;
+
+      h3 {
+        color: $color-primary-blue;
+      }
+      
+      p {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
+        color: $color-small-text;
+      }
+    }
+  }
+}

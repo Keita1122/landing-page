@@ -4,10 +4,11 @@
 .page {
   color: $color-text;
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   scrollbar-width: thin;
   scrollbar-color: rgb(73, 185, 255) transparent;
-  overflow-x: hidden;
+  overflow: hidden;
+  caret-color: rgba(255, 255, 255, 0);
 }

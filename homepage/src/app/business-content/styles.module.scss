@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.page {
+  height: 100%;
+
+  .headerContainer {
+    background: $color-primary-gradation-blue;
+    position: sticky;
+    top: 0;
+  }
+
+  
+}

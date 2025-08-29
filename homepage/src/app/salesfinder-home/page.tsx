@@ -14,10 +14,6 @@ export default function Home (){
       <div className={styles.main}>
         <MainScreen />        
       </div>
-      
-      <div className={styles.companySection}>
-
-      </div>
     </div>
   )
 };

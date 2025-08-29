@@ -10,17 +10,16 @@ const MainScreen = () => {
 
     <div className={styles.mainContents}>
       <Image src={BgImage} alt="バックグラウンド" className={styles.backgroundImage} />
-        <motion.h2
-          initial={{opacity: 0, x: "10%" ,y: "35%"}}
-          animate={{opacity: 1, x: "10%" ,y: "30%"}}
-          transition={{ duration: 2.5 }}
-          className={styles.mainMessage}
-          >
-          成功モデルに固執した営業を脱却せよ<br />
-          その先に必ず新しい「発見」が生まれる
-        </motion.h2>
-
-  </div>
+      <motion.h2
+        initial={{opacity: 0, x: "10%" ,y: "35%"}}
+        animate={{opacity: 1, x: "10%" ,y: "30%"}}
+        transition={{ duration: 2.5 }}
+        className={styles.mainMessage}
+        >
+        成功モデルに固執した営業を脱却せよ<br />
+        その先に必ず新しい「発見」が生まれる
+      </motion.h2>
+    </div>
   );
 };
 export default MainScreen;
