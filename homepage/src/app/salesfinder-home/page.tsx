@@ -3,7 +3,7 @@ import React from 'react';
 import styles from "./styles.module.scss";
 
 import Header from '@/components/header/Header';
-import MainScreen from '@/components/main-screen/MainScreen';
+import MainScreen from '@/components/salesfinder-home/MainScreen';
 
 
 export default function Home (){
