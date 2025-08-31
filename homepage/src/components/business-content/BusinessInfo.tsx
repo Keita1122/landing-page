@@ -5,14 +5,15 @@ import Image from "next/image"
 import sfImage from "../../../public/sf-image.png";
 import itConsul from "../../../public/it-consul3.jpg";
 import salesConsul from "../../../public/sales-consul3.jpg";
-
+import introImage from "../../../public/bgimg2.png";
 
 const BusinessInfo = () => {
 
   return(
     <div className={styles.main}>
+      <Image src={introImage} alt="背景画像" className={styles.bgImg} />
       <div className={styles.explanation}>
-        <h1>事業内容</h1>
+        <h1><ruby> SERVICE <rp>(</rp><rt>事業内容</rt><rp>)</rp> </ruby></h1>
         <p>Sales Finderは、営業・マーケティング部門を持つすべての企業に向けて<br/>
           CRM、営業コンサルティング、DX・ITコンサルティングをご提供します
         </p>

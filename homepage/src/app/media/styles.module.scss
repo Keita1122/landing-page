@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.page {
+  width: 100%;
+  min-height: 100lvh;
+  position: relative;
+  background: $color-primary-lightblue;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-button-text;
+  }
+}

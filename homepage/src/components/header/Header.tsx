@@ -58,12 +58,12 @@ const Header = ({
               </a>
             </li>
             <li>
-              <a href="#">
+              <Link href={`/media`}>
                 <div className={styles.navText}>
                   <span className={styles.en}>media</span>
                   <span className={styles.jp}>メディア</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#">

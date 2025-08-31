@@ -4,20 +4,45 @@
 .main {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  gap: 2rem;
+  gap: 1rem;
+
+  .bgImg {
+    height: 10rem;
+    object-fit: cover;
+    margin: 0 auto;
+  }
 
   .explanation {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+
+    h1 {
+      background: $color-background;
+      padding: 1.5rem;
+      margin-top: -80px; // 上の画像に食い込ませたい時
+      position: relative;
+      z-index: 2;
+      color: $color-primary-navyblue;
+      text-shadow: 3px 3px 1px $color-button-background-hover;
+      
+      /* 上辺を短く、下辺を長く */
+      clip-path: polygon(40% 0, 60% 0, 70% 100%, 30% 100%);
+    }
+    p {
+      margin-top: -15px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: $color-small-text;
+    }
   }
   
   .businesses {
     display: flex;
     justify-content: space-between;
     gap: 1rem;  
+    padding: 1rem 2rem;
     
     .content {
       flex: 1;
