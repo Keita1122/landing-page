@@ -1,0 +1,217 @@
+@use "sass:color";
+@use "./variables" as *;
+
+// レスポンシブメディアクエリ
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+// ボタン用 mixin
+//メインボタン(青)
+@mixin blue-button-style(
+  $padding-y: 0.5rem,
+  $padding-x: 1rem,
+  $width: 100%,
+) {
+  display: inline-block;
+  width: $width;
+  background-color: $color-primary-blue;
+  color: $color-button-text;
+  padding: $padding-y $padding-x;
+  border: $button-border;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: $button-transition;
+  letter-spacing: 0.2rem;
+
+  &:hover {
+    background-color: $color-button-background-hover;
+    color: $color-button-text-hover;
+  }
+
+  &:disabled {
+    background-color: color.adjust($color-primary-blue, $lightness: 15%);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+//キャンセルボタン
+@mixin cancel-button-style(
+  $padding-y: 0.5rem,
+  $padding-x: 1rem,
+  $width: 100%,
+) {
+  display: inline-block;
+  width: $width;
+  background-color: $color-background;
+  color: $color-text;
+  padding: $padding-y $padding-x;
+  border: $border-main;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: $button-transition;
+
+  &:hover {
+    background-color: rgb(210, 210, 210);
+  }
+
+  &:disabled {
+    background-color: color.adjust($color-primary-blue, $lightness: 15%);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+//削除ボタン
+@mixin delete-button-style(
+  $padding-y: 0.5rem,
+  $padding-x: 1rem,
+  $width: 100%,
+) {
+  display: inline-block;
+  width: $width;
+  background-color: #ff260e;
+  color: $color-button-text;
+  padding: $padding-y $padding-x;
+  border: 1px solid #db441e;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: $button-transition;
+  margin-left: 1.5rem;
+
+  &:hover {
+    color: #ff260e;
+    background-color: rgb(255, 212, 219);
+  }
+
+  &:disabled {
+    background-color: color.adjust($color-primary-blue, $lightness: 15%);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+// 見出しタイトル用 mixin
+@mixin heading-style($size: 1.5rem, $weight: 700, $margin-bottom: 1rem) {
+  font-family: $font-family-base;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color-text;
+  margin-bottom: $margin-bottom;
+}
+
+//メインボーダー
+@mixin main-border {
+  border: $border-main;
+  border-radius: $border-radius;
+}
+
+//inputタグ(共通)
+@mixin input-common ($width: 100%) {
+  width: $width;
+  padding: $input-padding;
+  border: $input-border;
+  border-radius: $input-border-radius;
+}
+
+/*Modal----------------------------------------------------------*/
+//モーダルオーバーレイ
+@mixin modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明のオーバーレイ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+//モーダル自体の位置と大きさ
+@mixin modal-window ($width: 50vw, $height: 75vh) {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-45%) translateY(-50%);
+  background: $color-element-background;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius + 0.3rem;
+}
+
+//モーダルタイトル
+@mixin modal-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+  background: $color-primary-gradation-blue;
+
+
+  h3 {
+    color: $color-element-background;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #b7ccf6;    
+  }
+}
+
+/*タブスイッチ-------------------------------------------------*/
+@mixin tab-active {
+  padding: 0.6rem 1.2rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: $color-primary-blue;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+@mixin tab-inactive {
+  padding: 0.6rem 1.2rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: $color-primary-lightblue;
+  cursor: pointer;
+  background: transparent;
+  transition: all .2s ease-in-out;
+}
+
+
+
