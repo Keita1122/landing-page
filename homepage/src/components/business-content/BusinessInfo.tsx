@@ -20,7 +20,7 @@ const BusinessInfo = () => {
       </div>
       <div className={styles.businesses}>
         <div className={styles.content}>
-          <h3 className={styles.title}>CRM事業</h3>
+          <h3 className={styles.title}>CRM事業　Sales Finder</h3>
           <p>ビジネスモデルに応じた最適なカスタマイズを実現する<br/>
           ”コンポーネント型”のシステム導入・運用支援を行います 
           </p>

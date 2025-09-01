@@ -50,12 +50,12 @@ const Header = ({
               </Link>
             </li>
             <li>
-              <a href="#">
+              <Link href={`/company-profile`}>
                 <div className={styles.navText}>
                   <span className={styles.en}>company</span>
                   <span className={styles.jp}>会社概要</span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
               <Link href={`/media`}>
