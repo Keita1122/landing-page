@@ -2,10 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./Header.module.scss";
 import Image from "next/image";
-import Logo from "../../../../public/new-logo.png";
+import Logo from "../../../../public/new-logo-color.png";
 import { motion } from "framer-motion";
 import  Link  from "next/link";
-import clsx from 'clsx';
 
 type HeaderProps = {
   customClassName? : string;
@@ -17,15 +16,15 @@ const Header = ({
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const page = document.querySelector(`.${styles.page}`);
-    if(!page)return;
-
     const handleScroll = () => {
-      setIsScrolled(page.scrollTop > 5);
+      if(window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
-    page.addEventListener("scroll", handleScroll);
-    return () => page.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
   }, []);
 
   return(    
@@ -35,46 +34,51 @@ const Header = ({
       transition={{ duration: 2 }}
       className={styles.page}
       >
-      <div className={clsx(styles.header,{ [styles.scrolledActive]: isScrolled },customClassName)}>
-        <Link href={`/salesfinder-home`}>
-          <Image src={Logo} alt="ロゴ" className={styles.logo}/>
-        </Link>
-        <nav>
-          <ul>
-            <li>
-              <Link href={`/business-content`}>
-                <div className={styles.navText}>
-                  <span className={styles.en}>service</span>
-                  <span className={styles.jp}>事業内容</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <a href="#">
-                <div className={styles.navText}>
-                  <span className={styles.en}>company</span>
-                  <span className={styles.jp}>会社概要</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className={styles.navText}>
-                  <span className={styles.en}>media</span>
-                  <span className={styles.jp}>メディア</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div className={styles.navText}>
-                  <span className={styles.en}>contact</span>
-                  <span className={styles.jp}>お問い合わせ</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+        <div className={styles.headerInner}>
+          <Link href={`/salesfinder-home`}>
+            <Image src={Logo} alt="ロゴ" className={styles.logo}/>
+          </Link>
+          <nav>
+            <ul>
+              <li>
+                <Link href={`/business-content`}>
+                  <div className={styles.navText}>
+                    <span>製品紹介</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <a href="#">
+                  <div className={styles.navText}>
+                    <span>機能紹介</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div className={styles.navText}>
+                    <span>料金プラン</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div className={styles.navText}>
+                    <span>サポート</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div className={styles.navText}>
+                    <button className={styles.hoverButton}>無料ではじめる</button>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </motion.div>  
   );
