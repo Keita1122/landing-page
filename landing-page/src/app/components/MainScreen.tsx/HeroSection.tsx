@@ -7,7 +7,7 @@ const HeroSection = () => {
 
   return(
     <div className={styles.hero}>
-     
+      
     </div>
 
   );

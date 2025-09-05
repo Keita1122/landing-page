@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./Header.module.scss";
 import Image from "next/image";
-import Logo from "../../../../public/new-logo-color.png";
+import Logo from "../../../../public/sf-logo.png";
 import { motion } from "framer-motion";
 import  Link  from "next/link";
 
@@ -44,28 +44,33 @@ const Header = ({
               <li>
                 <Link href={`/business-content`}>
                   <div className={styles.navText}>
-                    <span>製品紹介</span>
+                    <span className={styles.jp}>製品紹介</span>
+                    <span className={styles.en}>product</span>
                   </div>
                 </Link>
               </li>
               <li>
                 <a href="#">
                   <div className={styles.navText}>
-                    <span>機能紹介</span>
+                    <span className={styles.jp}>機能紹介</span>
+                    <span className={styles.en}>feature</span>
                   </div>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <div className={styles.navText}>
-                    <span>料金プラン</span>
+                    <span className={styles.jp}>料金プラン</span>
+                    <span className={styles.en}>pricing
+                    </span>
                   </div>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <div className={styles.navText}>
-                    <span>サポート</span>
+                    <span className={styles.jp}>サポート</span>
+                    <span className={styles.en}>support</span>
                   </div>
                 </a>
               </li>
