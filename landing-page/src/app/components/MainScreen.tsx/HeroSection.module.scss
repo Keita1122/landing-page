@@ -4,5 +4,217 @@
 .hero {
   width: 100%;
   height: 100vh;
- 
+  display: flex;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* 半透明の黒 */
+    z-index: 1;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .bgSize {
+    width: 100%;
+    height: 100%;
+    padding-top: 4.5rem;
+    
+    .mainScreen {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+      height: 60%;
+      background-color: $color-element-background;
+      padding: 0 3%;
+
+      .leftSection {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .letterContainer {
+          height: auto;
+          width: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          
+          h1 {
+            font-size: 2rem;
+            white-space: nowrap;
+            color: $color-text;
+            line-height: 2;
+            margin: 2rem;
+            text-align: center;
+            
+            span {
+              font-size: 3.2rem;
+              background: linear-gradient(90deg, #1d4ed8, #268efe);
+              -webkit-background-clip: text; /* Safari/Chrome用 */
+              -webkit-text-fill-color: transparent;
+              background-clip: text; /* Firefoxなど */
+              color: transparent; /* 念のため */
+            }
+          }
+          
+          .leadButtons {
+            display: flex;
+            gap: 4rem;
+            margin: 2rem 0;
+            
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              width: 15rem;
+              margin:0 auto;
+              padding: .9rem 2rem;
+              border: 1px solid #1d4ed8;
+              border-radius: 5px;
+              background: $color-primary-gradation-blue;
+              color: $color-button-text;
+              font-size: 1.1rem;
+              font-weight: 500;
+              
+              &:hover {
+                animation: anima-button-30 1s;
+                background:linear-gradient(135deg, #268efe, #8a5cf6);
+                transition: all 0.5s ease-in-out;
+                border: 1px solid $color-primary-lightblue;
+              }
+              
+              @keyframes anima-button-30 {
+                0% {
+                  box-shadow: 0 0 0 0 rgb(29 78 216 / 50%);
+                }
+                100% {
+                  box-shadow: 0 0 0 1.2em rgb(0 0 0 / 0%);
+                }
+              } 
+              
+              &::after {
+                transform: rotate(45deg);
+                width: 5px;
+                height: 5px;
+                margin-left: 15px;
+                border-top: 2px solid $color-button-text;
+                border-right: 2px solid $color-button-text;
+                content: '';
+              }
+            }
+            .materialButton {
+              background: $color-element-background;
+              color: $color-primary-blue;
+              
+              &:hover {
+                background:linear-gradient(135deg, #268efe2e, #eff7ff);
+                transition: all 0.5s ease-in-out;
+                //color: $color-button-text;
+              }
+
+              &::after {
+                transform: rotate(45deg);
+                width: 5px;
+                height: 5px;
+                margin-left: 15px;
+                border-top: 2px solid $color-primary-blue;
+                border-right: 2px solid $color-primary-blue;
+                content: '';
+                
+                &:hover {
+                  transform: rotate(45deg);
+                  width: 5px;
+                  height: 5px;
+                  margin-left: 15px;
+                  border-top: 2px solid $color-button-text;
+                  border-right: 2px solid $color-button-text;
+                  content: '';
+                }
+              }
+            }
+          }
+        }
+      }
+      .rightSection {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        background-image: url("/sf-image2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;   
+
+        .popCircle {
+          position: absolute;
+          bottom: 5%;
+          left: 10%;
+          background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+          padding: 1.8rem;
+          color: $color-button-text;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .subExplanation {
+      height: 40%;
+      display: flex;
+      justify-content: space-between;
+
+      .leftExplain {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .content {
+          max-width: 800px;
+          background: #ffffff;
+          padding: 2rem;
+          border-radius: 1rem;
+          text-align: center;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+          border: 1px solid #e6ebf5;
+
+          h2 {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+          }
+          h3 {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: $color-small-text;
+            font-weight: 500;
+
+            strong {
+              color: #0b93e8;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .rightExplain {
+        width: 65%;
+      }
+    }
+  }
+  
 }
