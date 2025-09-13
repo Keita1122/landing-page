@@ -1,0 +1,100 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.contactFormContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background: $color-element-background;
+  gap: 2rem;
+  padding-top: 3rem;
+
+  .title {
+    flex: 0.1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    p {
+      color: $color-small-text;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 70%;
+    min-height: 70vh;
+    font-size: 1.2rem;
+    border: $border-main;
+    border-radius: $border-radius;
+    padding: 2rem;
+    box-shadow: $general-box-shadow;
+    background: $color-button-background-hover;
+
+    .twoColumn {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 3rem;
+      width: 90%;
+      margin: 0 auto;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        input,select {
+          height: 2.5rem;
+          padding: 0 0.5rem;
+        }
+      }
+    }
+    .freeForm {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+      
+      textarea {
+        flex: 1;
+        min-height: 100px;
+        width: 100%;
+        resize: none;
+        overflow: auto;
+        padding: 0.5rem;
+        box-sizing: border-box;
+      }
+    }
+    .submitButton {
+      @include blue-button-style;
+      width: 40%;
+      display: flex;
+      margin: 0 auto;
+      max-height: 4rem;
+      align-self: center;
+    }
+    /* スマホ対応 */
+    @media (max-width: 768px) {
+    .contactFormContainer {
+      padding: 1rem;
+  
+      .contactForm {
+        grid-template-rows: auto auto auto auto; // ほぼ縦積み
+        .twoColumn {
+          grid-template-columns: 1fr; // スマホは1列に
+        }
+      }
+    }
+    }
+  }
+}

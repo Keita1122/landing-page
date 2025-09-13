@@ -1,5 +1,8 @@
+import React from "react";
 import styles from "./HeroSection.module.scss";
 import SubExplanation from './SubExplanation';
+import Image from 'next/image';
+import DemoImg from "../../../../public/demo-screen.png";
 
 const HeroSection = () => {
 
@@ -19,6 +22,10 @@ const HeroSection = () => {
             </div>
           </div>
           <div className={styles.rightSection}>    
+            <Image 
+              src={DemoImg} 
+              alt="デモ画像"
+              className={styles.demoImage} />
             <div className={styles.popCircle}>
               <p>全業種<br/>対応型</p>  
             </div>  
@@ -27,9 +34,9 @@ const HeroSection = () => {
         <div className={styles.subExplanation}>
           <div className={styles.leftExplain}>
             <div className={styles.content}>
-              <h2>基本料金は無料</h2>
-              <h3>余分な機能にコストをかけず、<br/>
-                  事業に必要な機能だけを選んで導入できます。<br/>
+              <h2>基本料金無料</h2>
+              <h3>余分な機能にコストをかけず、
+                  事業に必要な機能だけを選んで導入できます。
                   <strong>スモールスタートから大規模運用まで柔軟に対応</strong>
               </h3>
             </div>
@@ -40,7 +47,6 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-
   );
 };
 export default HeroSection;

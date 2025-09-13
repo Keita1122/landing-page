@@ -1,0 +1,79 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.priceContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  
+  .threePlans { 
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+    max-width: 1200px;
+    
+    .planContainer {
+      border: $border-main;
+      border-radius: $border-radius;
+      padding: 2rem;
+      box-shadow: $general-box-shadow;
+      background: $color-element-background;
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        flex: 0.3;
+        text-align: center;
+        font-size: 1.2rem;
+        p {
+          font-size: 1.2rem;
+          color: $color-small-text;
+          font-weight: 500;
+        }
+      }
+      .price {
+        flex: 0.25;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+
+        .flex {
+          display: flex;
+          align-items: baseline;
+          font-size: 1.5rem;
+          margin: 0 auto;
+        }
+        .annotation {
+          text-align: right;
+          font-size: 0.8rem;
+          color: $color-small-text;
+        }
+      }
+      .explanation {
+        flex: 0.45;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .item {
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

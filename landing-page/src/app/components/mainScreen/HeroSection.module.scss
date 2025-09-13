@@ -24,7 +24,7 @@
   .bgSize {
     width: 100%;
     height: 100%;
-    padding-top: 4.5rem;
+    padding-top: 2rem;
     
     .mainScreen {
       display: flex;
@@ -37,7 +37,7 @@
       padding: 0 3%;
 
       .leftSection {
-        width: 50%;
+        width: 60%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -150,17 +150,21 @@
         }
       }
       .rightSection {
-        width: 50%;
+        width: 40%;
         height: 100%;
         position: relative;
-        background-image: url("/sf-image2.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;   
+        padding-top: 4rem;
+
+        .demoImage {
+          width: 60%;
+          height: auto;
+          margin: 0 auto;
+        }
 
         .popCircle {
           position: absolute;
           bottom: 5%;
-          left: 10%;
+          left: 0%;
           background: linear-gradient(135deg, #22d3ee, #8b5cf6);
           padding: 1.8rem;
           color: $color-button-text;
@@ -173,11 +177,14 @@
 
     .subExplanation {
       height: 40%;
+      background: $color-primary-gradation-blue;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
+      padding-bottom: 2rem;
 
       .leftExplain {
-        width: 35%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -185,34 +192,38 @@
         align-items: center;
         
         .content {
-          max-width: 800px;
-          background: #ffffff;
-          padding: 2rem;
-          border-radius: 1rem;
+          width: 80%;
           text-align: center;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-          border: 1px solid #e6ebf5;
+          background: #ffffff1e;
+          border-radius: $border-radius;
+          margin: 1rem 0;
+          padding: 1rem;
 
           h2 {
-            font-size: 2.5rem;
-            color: #2563eb;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            line-height: 1.5;
+            color: $color-button-text;
+            
+            border-radius: 25px;
+            width: 40%;
+            margin: 0 auto;
           }
           h3 {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             line-height: 1.8;
-            color: $color-small-text;
+            color: #fffde2;
             font-weight: 500;
+            margin-top: 0.5rem;
 
             strong {
-              color: #0b93e8;
+              color: #fef600;
               font-weight: 600;
             }
           }
         }
       }
       .rightExplain {
-        width: 65%;
+        width: 100%;
       }
     }
   }
