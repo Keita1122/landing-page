@@ -11,9 +11,12 @@ const Feature = () => {
       <h2>「使いやすい」「無駄なコストをかけない」に特化したCRMです</h2>
       <div className={styles.need}>
         <h2>CRMの利用における３つの課題</h2>
-        <span>利用料金が高い</span><span>複雑で使いづらい</span><span>社内に浸透しない</span>
+        <div className={styles.issues}>
+          <span className={styles.example}>利用料金が高い</span>
+          <span className={styles.example}>複雑で使いづらい</span>
+          <span className={styles.example}>社内に浸透しない</span>
+        </div>
         
-        <div className={styles.triangle}></div>
         <div className={styles.solution}>
           <h2>使いたい機能だけ使えればすべて解決！！</h2>
         </div>

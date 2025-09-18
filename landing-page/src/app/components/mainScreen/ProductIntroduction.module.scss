@@ -17,7 +17,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    background-color: rgba(27, 88, 209, 0.25);
+    background-color: rgba(25, 103, 219, 0.143);
     clip-path: polygon(0% 0, 100% 0, 50% 50%);
     height: 50vh;
     width: 50vw;
@@ -30,6 +30,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: $color-primary-navyblue;
+    padding: 1rem;
+  }
+  .need {
+    .issues {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      .example {
+        flex: 1;
+        border: $border-main;
+        border-radius: $border-radius;
+        text-align: center;
+
+        
+      }
+    }
+
   }
 
   .cardGrid {

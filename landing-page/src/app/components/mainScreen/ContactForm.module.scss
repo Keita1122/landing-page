@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  background: $color-element-background;
+  background: $color-primary-gradation-blue;
   gap: 2rem;
   padding-top: 3rem;
 
@@ -20,8 +20,8 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    color: $color-button-text;
     p {
-      color: $color-small-text;
       font-size: 1.1rem;
       font-weight: 500;
     }
@@ -31,15 +31,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 70%;
     min-height: 70vh;
     font-size: 1.2rem;
     border: $border-main;
     border-radius: $border-radius;
-    padding: 2rem;
+    padding: 3rem;
     box-shadow: $general-box-shadow;
-    background: $color-button-background-hover;
+    background: $color-element-background;
 
     .twoColumn {
       display: grid;
